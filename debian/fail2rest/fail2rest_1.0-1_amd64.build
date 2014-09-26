@@ -1,0 +1,178 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: source package fail2rest
+dpkg-buildpackage: source version 1.0-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Sean DuBois <sean@siobud.com>
+ dpkg-source --before-build fail2rest-1.0
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --buildsystem=golang --with=golang
+   dh_testdir -O--buildsystem=golang
+   dh_auto_clean -O--buildsystem=golang
+	rm -rf obj-x86_64-linux-gnu
+   dh_clean -O--buildsystem=golang
+	rm -f debian/fail2rest.substvars
+	rm -f debian/fail2rest.*.debhelper
+	rm -rf debian/fail2rest/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+	rm -f *-stamp
+ dpkg-source -b fail2rest-1.0
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building fail2rest using existing ./fail2rest_1.0.orig.tar.gz
+dpkg-source: info: building fail2rest in fail2rest_1.0-1.debian.tar.xz
+dpkg-source: info: building fail2rest in fail2rest_1.0-1.dsc
+ debian/rules build
+dh build --buildsystem=golang --with=golang
+   dh_testdir -O--buildsystem=golang
+   dh_auto_configure -O--buildsystem=golang
+	mkdir -p obj-x86_64-linux-gnu
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/root/fail2rest/fail2rest-1.0'
+go get -d
+dh_auto_build
+	cd obj-x86_64-linux-gnu
+	go install -v github.com/sean-der/fail2rest
+github.com/kisielk/og-rek
+github.com/mattn/go-sqlite3
+github.com/Sean-Der/fail2go
+github.com/Sean-Der/goWHOIS
+github.com/gorilla/context
+github.com/gorilla/mux
+github.com/sean-der/fail2rest
+	cd /root/fail2rest/fail2rest-1.0
+make[1]: Leaving directory '/root/fail2rest/fail2rest-1.0'
+   dh_auto_test -O--buildsystem=golang
+	cd obj-x86_64-linux-gnu
+	go test -v github.com/sean-der/fail2rest
+?   	github.com/sean-der/fail2rest	[no test files]
+	cd /root/fail2rest/fail2rest-1.0
+ fakeroot debian/rules binary
+dh binary --buildsystem=golang --with=golang
+   dh_testroot -O--buildsystem=golang
+   dh_prep -O--buildsystem=golang
+	rm -f debian/fail2rest.substvars
+	rm -f debian/fail2rest.*.debhelper
+	rm -rf debian/fail2rest/
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/root/fail2rest/fail2rest-1.0'
+dh_auto_install
+	install -d debian/fail2rest
+	cd obj-x86_64-linux-gnu
+	mkdir -p /root/fail2rest/fail2rest-1.0/debian/fail2rest/usr
+	cd /root/fail2rest/fail2rest-1.0
+	cd obj-x86_64-linux-gnu
+	cp -r bin /root/fail2rest/fail2rest-1.0/debian/fail2rest/usr
+	cd /root/fail2rest/fail2rest-1.0
+	cd obj-x86_64-linux-gnu
+	mkdir -p /root/fail2rest/fail2rest-1.0/debian/fail2rest/usr/share/gocode/src/github.com/sean-der/fail2rest
+	cd /root/fail2rest/fail2rest-1.0
+	cd obj-x86_64-linux-gnu
+	cp -r -T src/github.com/sean-der/fail2rest /root/fail2rest/fail2rest-1.0/debian/fail2rest/usr/share/gocode/src/github.com/sean-der/fail2rest
+	cd /root/fail2rest/fail2rest-1.0
+mkdir -p debian/fail2rest/etc
+cp config.json debian/fail2rest/etc/fail2rest.json
+make[1]: Leaving directory '/root/fail2rest/fail2rest-1.0'
+   dh_installdocs -O--buildsystem=golang
+	install -g 0 -o 0 -d debian/fail2rest/usr/share/doc/fail2rest
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/fail2rest/usr/share/doc/fail2rest/copyright
+   dh_installchangelogs -O--buildsystem=golang
+	install -o 0 -g 0 -p -m644 debian/changelog debian/fail2rest/usr/share/doc/fail2rest/changelog.Debian
+   dh_installinit -O--buildsystem=golang
+	install -d debian/fail2rest/etc/init.d
+	install -p -m755 debian/fail2rest.init debian/fail2rest/etc/init.d/fail2rest
+	echo "# Automatically added by dh_installinit">> debian/fail2rest.postinst.debhelper
+	sed "s/#SCRIPT#/fail2rest/;s/#INITPARMS#/defaults/;s/#ERROR_HANDLER#/exit \$?/" /usr/share/debhelper/autoscripts/postinst-init >> debian/fail2rest.postinst.debhelper
+	echo '# End automatically added section' >> debian/fail2rest.postinst.debhelper
+	echo "# Automatically added by dh_installinit">> debian/fail2rest.prerm.debhelper
+	sed "s/#SCRIPT#/fail2rest/;s/#INITPARMS#/defaults/;s/#ERROR_HANDLER#/exit \$?/" /usr/share/debhelper/autoscripts/prerm-init >> debian/fail2rest.prerm.debhelper
+	echo '# End automatically added section' >> debian/fail2rest.prerm.debhelper
+	echo "# Automatically added by dh_installinit">> debian/fail2rest.postrm.debhelper
+	sed "s/#SCRIPT#/fail2rest/;s/#INITPARMS#/defaults/;s/#ERROR_HANDLER#/exit \$?/" /usr/share/debhelper/autoscripts/postrm-init >> debian/fail2rest.postrm.debhelper
+	echo '# End automatically added section' >> debian/fail2rest.postrm.debhelper
+   dh_perl -O--buildsystem=golang
+   dh_link -O--buildsystem=golang
+   dh_compress -O--buildsystem=golang
+	cd debian/fail2rest
+	chmod a-x usr/share/doc/fail2rest/changelog.Debian
+	gzip -9nf usr/share/doc/fail2rest/changelog.Debian
+	cd '/root/fail2rest/fail2rest-1.0'
+   dh_fixperms -O--buildsystem=golang
+	find debian/fail2rest  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/fail2rest ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/fail2rest/usr/share/doc -type f  ! -regex 'debian/fail2rest/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fail2rest/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/fail2rest/usr/share/man debian/fail2rest/usr/man/ debian/fail2rest/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fail2rest -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fail2rest/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fail2rest/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fail2rest -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fail2rest/usr/lib/x86_64-linux-gnu/perl5/5.20 debian/fail2rest/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/fail2rest/usr/bin -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+	find debian/fail2rest/etc/init.d -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+	find debian/fail2rest/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
+   dh_strip -O--buildsystem=golang
+	strip --remove-section=.comment --remove-section=.note debian/fail2rest/usr/bin/fail2rest
+   dh_makeshlibs -O--buildsystem=golang
+	rm -f debian/fail2rest/DEBIAN/shlibs
+   dh_shlibdeps -O--buildsystem=golang
+	install -o 0 -g 0 -d debian/fail2rest/DEBIAN
+	dpkg-shlibdeps -Tdebian/fail2rest.substvars debian/fail2rest/usr/bin/fail2rest
+   dh_installdeb -O--buildsystem=golang
+	printf '#!/bin/sh
+set -e
+' > debian/fail2rest/DEBIAN/postinst
+	cat debian/fail2rest.postinst.debhelper >> debian/fail2rest/DEBIAN/postinst
+	chown 0:0 debian/fail2rest/DEBIAN/postinst
+	chmod 755 debian/fail2rest/DEBIAN/postinst
+	printf '#!/bin/sh
+set -e
+' > debian/fail2rest/DEBIAN/prerm
+	cat debian/fail2rest.prerm.debhelper >> debian/fail2rest/DEBIAN/prerm
+	chown 0:0 debian/fail2rest/DEBIAN/prerm
+	chmod 755 debian/fail2rest/DEBIAN/prerm
+	printf '#!/bin/sh
+set -e
+' > debian/fail2rest/DEBIAN/postrm
+	cat debian/fail2rest.postrm.debhelper >> debian/fail2rest/DEBIAN/postrm
+	chown 0:0 debian/fail2rest/DEBIAN/postrm
+	chmod 755 debian/fail2rest/DEBIAN/postrm
+	find debian/fail2rest/etc -type f -printf '/etc/%P
+' >> debian/fail2rest/DEBIAN/conffiles
+	chmod 644 debian/fail2rest/DEBIAN/conffiles
+   dh_golang -O--buildsystem=golang
+	(grep -s -v misc:Built-Using debian/fail2rest.substvars; echo "misc:Built-Using=golang (= 2:1.3.1-1), ") > debian/fail2rest.substvars.new
+	mv debian/fail2rest.substvars.new debian/fail2rest.substvars
+   dh_gencontrol -O--buildsystem=golang
+	echo misc:Depends= >> debian/fail2rest.substvars
+	dpkg-gencontrol -pfail2rest -ldebian/changelog -Tdebian/fail2rest.substvars -Pdebian/fail2rest
+dpkg-gencontrol: warning: package fail2rest: unused substitution variable ${misc:Built-Using}
+	chmod 644 debian/fail2rest/DEBIAN/control
+	chown 0:0 debian/fail2rest/DEBIAN/control
+   dh_md5sums -O--buildsystem=golang
+	(cd debian/fail2rest >/dev/null ; find . -type f ! -path "./etc/fail2rest.json" ! -path "./etc/init.d/fail2rest"  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/fail2rest/DEBIAN/md5sums
+	chown 0:0 debian/fail2rest/DEBIAN/md5sums
+   dh_builddeb -u-Zxz -O--buildsystem=golang
+	dpkg-deb -Zxz --build debian/fail2rest ..
+dpkg-deb: building package `fail2rest' in `../fail2rest_1.0-1_amd64.deb'.
+ dpkg-genchanges  >../fail2rest_1.0-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build fail2rest-1.0
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+warning: the authors of lintian do not recommend running it with root privileges!
+E: fail2rest: embedded-library usr/bin/fail2rest: sqlite
+W: fail2rest: hardening-no-relro usr/bin/fail2rest
+W: fail2rest: new-package-should-close-itp-bug
+W: fail2rest: init.d-script-has-bad-lsb-line etc/init.d/fail2rest:19
+W: fail2rest: binary-without-manpage usr/bin/fail2rest
+Finished running lintian.

@@ -1,0 +1,15 @@
+Source: fail2rest
+Section: net
+Priority: optional
+Maintainer: Sean DuBois <sean@siobud.com>
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), golang-go (>= 1.2.0), dh-golang (>= 1.1), git
+Vcs-Git: git://github.com/sean-der/fail2rest.git
+Vcs-Browser: http://github.com/sean-der/fail2rest
+
+Package: fail2rest
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, fail2ban
+Description: fail2ban REST server
+ fail2rest is a small REST server that aims to allow 
+ full administration of a fail2ban server via HTTP
