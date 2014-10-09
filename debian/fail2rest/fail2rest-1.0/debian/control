@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Sean DuBois <sean@siobud.com>
 Standards-Version: 3.9.5
-Build-Depends: debhelper (>= 9), golang-go (>= 1.2.0), dh-golang (>= 1.1), git, golang-mux-dev
+Build-Depends: debhelper (>= 9), golang-go (>= 1.2.0), dh-golang (>= 1.1), golang-mux-dev
 Vcs-Git: git://github.com/sean-der/fail2rest.git
 Vcs-Browser: http://github.com/sean-der/fail2rest
 
