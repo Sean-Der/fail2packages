@@ -10,23 +10,23 @@ Maintainer: Sean DuBois <sean@siobud.com>
 Changed-By: Sean DuBois <sean@siobud.com>
 Description:
  golang-fail2go-dev - Go library for commuication with fail2ban via it server socket
-Closes: 764565
+Closes: 764634
 Changes:
  golang-fail2go (0.0~git20141008-1) unstable; urgency=low
  .
-   * Initial package. Closes: #764565.
+   * Initial package. Closes: #764634.
 Checksums-Sha1:
- ea7a9a6ccf696419d9753eb8ea6d38ced764ba62 1040 golang-fail2go_0.0~git20141008-1.dsc
+ 647f2431c512250463df5d8fd6a1cdcbb5b18a45 1040 golang-fail2go_0.0~git20141008-1.dsc
  177bfb34f44b7f0adcfa798abbeb2a348e2f719b 2992 golang-fail2go_0.0~git20141008.orig.tar.xz
- c8d887fd43e4d3ee1ff134fdf946093eac2f6b99 1736 golang-fail2go_0.0~git20141008-1.debian.tar.xz
- e5d958536933990a5b34d93a3e7738867325f2bc 3864 golang-fail2go-dev_0.0~git20141008-1_amd64.deb
+ 710cef8eb90ea24f0bd5bd25d7a961747978e0a9 1744 golang-fail2go_0.0~git20141008-1.debian.tar.xz
+ 31a0a12eea55c46b50af80a92828008dd38d5ba6 3866 golang-fail2go-dev_0.0~git20141008-1_amd64.deb
 Checksums-Sha256:
- e591060199d443766c8e075016bf9f38c5b6fc812e56f16d86e5d1bae1bccfda 1040 golang-fail2go_0.0~git20141008-1.dsc
+ b93d72cc4701ee5b7770822350da8f14071dd2b99087049275c588faa19780a3 1040 golang-fail2go_0.0~git20141008-1.dsc
  e3bd5cf061cf9a59a30bd0e97cc767a0b553199b14c55b8cc22c66265844ac60 2992 golang-fail2go_0.0~git20141008.orig.tar.xz
- d0c8745aa2830f23c80e77add937f8a7fe0606282703b440a104249dacfc2743 1736 golang-fail2go_0.0~git20141008-1.debian.tar.xz
- 564670801c7f905613bf8c38c0dcb6a4b953b29bf6a7a7c435802e4dc93b48f4 3864 golang-fail2go-dev_0.0~git20141008-1_amd64.deb
+ 26f3385e16320b34fb996a90699b7f808a0a05f84c1d156659284a7dbd93332f 1744 golang-fail2go_0.0~git20141008-1.debian.tar.xz
+ 1409335910dd17a486d5db8cf78d25cf7767e1f0530e3ab5d8ad004e3dcd4ba3 3866 golang-fail2go-dev_0.0~git20141008-1_amd64.deb
 Files:
- 4fbfd99bfa5e623c4a8a3ce6f8773c8b 1040 devel extra golang-fail2go_0.0~git20141008-1.dsc
+ 687cab681c23ae02ffef37a7ee32a334 1040 devel extra golang-fail2go_0.0~git20141008-1.dsc
  2044aac4d025b74c4d927551fb1e37fd 2992 devel extra golang-fail2go_0.0~git20141008.orig.tar.xz
- 1e332ce2e1ab5209651edb3bbd009ece 1736 devel extra golang-fail2go_0.0~git20141008-1.debian.tar.xz
- 3697d9a405172b65336a866269c4cd57 3864 devel extra golang-fail2go-dev_0.0~git20141008-1_amd64.deb
+ 99579b2a0846a6e4105ed3a316b8ef63 1744 devel extra golang-fail2go_0.0~git20141008-1.debian.tar.xz
+ 3fe1fd9e0b9673117623f11372a6dcea 3866 devel extra golang-fail2go-dev_0.0~git20141008-1_amd64.deb

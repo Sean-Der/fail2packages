@@ -1,30 +1,28 @@
  dpkg-buildpackage -rfakeroot -D -us -uc
-dpkg-buildpackage: source package golang-fail2go
+dpkg-buildpackage: source package golang-gowhois
 dpkg-buildpackage: source version 0.0~git20141008-1
 dpkg-buildpackage: source distribution unstable
 dpkg-buildpackage: source changed by Sean DuBois <sean@siobud.com>
- dpkg-source --before-build golang-fail2go-dev_0.0~git20141008
+ dpkg-source --before-build golang-gowhois-dev_0.0~git20141008
 dpkg-buildpackage: host architecture amd64
  fakeroot debian/rules clean
 dh clean --buildsystem=golang --with=golang
    dh_testdir -O--buildsystem=golang
    dh_auto_clean -O--buildsystem=golang
    dh_clean -O--buildsystem=golang
- dpkg-source -b golang-fail2go-dev_0.0~git20141008
+ dpkg-source -b golang-gowhois-dev_0.0~git20141008
 dpkg-source: info: using source format `3.0 (quilt)'
-dpkg-source: info: building golang-fail2go using existing ./golang-fail2go_0.0~git20141008.orig.tar.xz
-dpkg-source: info: building golang-fail2go in golang-fail2go_0.0~git20141008-1.debian.tar.xz
-dpkg-source: info: building golang-fail2go in golang-fail2go_0.0~git20141008-1.dsc
+dpkg-source: info: building golang-gowhois using existing ./golang-gowhois_0.0~git20141008.orig.tar.xz
+dpkg-source: info: building golang-gowhois in golang-gowhois_0.0~git20141008-1.debian.tar.xz
+dpkg-source: info: building golang-gowhois in golang-gowhois_0.0~git20141008-1.dsc
  debian/rules build
 dh build --buildsystem=golang --with=golang
    dh_testdir -O--buildsystem=golang
    dh_auto_configure -O--buildsystem=golang
    dh_auto_build -O--buildsystem=golang
-code.google.com/p/gosqlite/sqlite3
-github.com/kisielk/og-rek
-github.com/Sean-Der/fail2go
+github.com/Sean-Der/goWHOIS
    dh_auto_test -O--buildsystem=golang
-?   	github.com/Sean-Der/fail2go	[no test files]
+?   	github.com/Sean-Der/goWHOIS	[no test files]
  fakeroot debian/rules binary
 dh binary --buildsystem=golang --with=golang
    dh_testroot -O--buildsystem=golang
@@ -44,13 +42,13 @@ dh_pysupport: This program is deprecated, you should use dh_python2 instead. Mig
    dh_installdeb -O--buildsystem=golang
    dh_golang -O--buildsystem=golang
    dh_gencontrol -O--buildsystem=golang
-dpkg-gencontrol: warning: Depends field of package golang-fail2go-dev: unknown substitution variable ${shlibs:Depends}
+dpkg-gencontrol: warning: Depends field of package golang-gowhois-dev: unknown substitution variable ${shlibs:Depends}
    dh_md5sums -O--buildsystem=golang
    dh_builddeb -u-Zxz -O--buildsystem=golang
-dpkg-deb: building package `golang-fail2go-dev' in `../golang-fail2go-dev_0.0~git20141008-1_amd64.deb'.
- dpkg-genchanges  >../golang-fail2go_0.0~git20141008-1_amd64.changes
+dpkg-deb: building package `golang-gowhois-dev' in `../golang-gowhois-dev_0.0~git20141008-1_amd64.deb'.
+ dpkg-genchanges  >../golang-gowhois_0.0~git20141008-1_amd64.changes
 dpkg-genchanges: including full source code in upload
- dpkg-source --after-build golang-fail2go-dev_0.0~git20141008
+ dpkg-source --after-build golang-gowhois-dev_0.0~git20141008
 dpkg-buildpackage: full upload (original source is included)
 Now running lintian...
 Finished running lintian.

@@ -10,22 +10,23 @@ Maintainer: Sean DuBois <sean@siobud.com>
 Changed-By: Sean DuBois <sean@siobud.com>
 Description:
  fail2rest  - fail2ban REST server
+Closes: 764309
 Changes:
  fail2rest (1.0-1) UNRELEASED; urgency=medium
  .
-   * Initial release.
+   * Initial release. (Closes: #764309)
 Checksums-Sha1:
- 95db7d788a6a0164c04bafdb6dfdc0558d57b7fc 908 fail2rest_1.0-1.dsc
+ 994cd1b22854e5ce39e2ecab25c6f6d2a34e64cf 959 fail2rest_1.0-1.dsc
  9533e944a6eb9d91a283eb39d49409599fea0055 5920 fail2rest_1.0.orig.tar.gz
- 7015d2738e1782a3b1ec1a4b24c91d45b08b6a7a 2368 fail2rest_1.0-1.debian.tar.xz
- 3af034942cc5c8d4f727074824c04f6297c26d10 1385680 fail2rest_1.0-1_amd64.deb
+ 8439c42f43a8a4e980c0008059d970ae8be7ac36 2360 fail2rest_1.0-1.debian.tar.xz
+ 4da74854d6e3efe087b08d3bb97dd52a4f9aca23 1090500 fail2rest_1.0-1_amd64.deb
 Checksums-Sha256:
- 7b0e61a72d829ee6c5103a9bb46138166aadc4d7c83a1827c82b815b19a9e1ab 908 fail2rest_1.0-1.dsc
+ 1a92e3f259b1ebcd87044b8a4341d78c534e6e108a927bee03207b5c74d644b2 959 fail2rest_1.0-1.dsc
  3bf869a9f08f6cdf36ef977aacb53d1a39f776259461a69ef8133267fbf86424 5920 fail2rest_1.0.orig.tar.gz
- f896388721794ffa90849fdfbb97afe1fea0a6dbb0a5b855e7c9962ebc1600c8 2368 fail2rest_1.0-1.debian.tar.xz
- ccbace0008772b5bac27da0cbefeebbda91f1b2a3192da31288e6852ca028149 1385680 fail2rest_1.0-1_amd64.deb
+ c86c468855ac0b576348a4fa301e39d08cee82a74c4668d1f8525a0d4cd695cb 2360 fail2rest_1.0-1.debian.tar.xz
+ bcf8f0785576bf8a326cff0509a0b4632ab064606f5b1e3f6654df74b9763ca9 1090500 fail2rest_1.0-1_amd64.deb
 Files:
- e087fcda297098c1b79e7336f97c58b5 1385680 net optional fail2rest_1.0-1_amd64.deb
- f79fb6bf75f43e4d6e97c3118dfb10f3 908 net optional fail2rest_1.0-1.dsc
+ a8801c18f2e87c36e23ff246f6afe46d 959 net optional fail2rest_1.0-1.dsc
  bbbacc64c154c041d57ab990c9aa88dc 5920 net optional fail2rest_1.0.orig.tar.gz
- ef6356dcc900833a2f9a359e55b2e8aa 2368 net optional fail2rest_1.0-1.debian.tar.xz
+ 12b30570849ca9441efccf410bf32d35 2360 net optional fail2rest_1.0-1.debian.tar.xz
+ f7df5391f505e0682a6356b387584c7f 1090500 net optional fail2rest_1.0-1_amd64.deb

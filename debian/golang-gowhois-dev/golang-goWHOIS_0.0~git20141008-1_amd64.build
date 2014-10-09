@@ -1,0 +1,9 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package golang-goWHOIS
+dpkg-buildpackage: source version 0.0~git20141008-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Sean DuBois <sean@siobud.com>
+ dpkg-source --before-build golang-goWHOIS-dev_0.0~git20141008
+dpkg-buildpackage: host architecture amd64
+dpkg-source: error: source package name 'golang-goWHOIS' is illegal: character 'W' not allowed
+dpkg-buildpackage: error: dpkg-source --before-build golang-goWHOIS-dev_0.0~git20141008 gave error exit status 255

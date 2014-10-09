@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Wed, 8 Oct 2014 16:42:03 -0600
+Source: golang-gowhois
+Binary: golang-gowhois-dev
+Architecture: source amd64
+Version: 0.0~git20141008-1
+Distribution: unstable
+Urgency: low
+Maintainer: Sean DuBois <sean@siobud.com>
+Changed-By: Sean DuBois <sean@siobud.com>
+Description:
+ golang-gowhois-dev - Simple WHOIS library written in Go
+Closes: 764648
+Changes:
+ golang-gowhois (0.0~git20141008-1) unstable; urgency=low
+ .
+   * Initial package. Closes: #764648.
+Checksums-Sha1:
+ a6bb92f1e78f94ea1c7fbe40b84e47970547d968 1019 golang-gowhois_0.0~git20141008-1.dsc
+ 2a66734d6d84064a0f2f125506c6f7f4c8174572 2144 golang-gowhois_0.0~git20141008.orig.tar.xz
+ 33152b6a1c780e8d32db675f96bcba6217f5aebf 1408 golang-gowhois_0.0~git20141008-1.debian.tar.xz
+ 2b6042e784adf1de20f0fae57bcd2b6730f4e263 3176 golang-gowhois-dev_0.0~git20141008-1_amd64.deb
+Checksums-Sha256:
+ a5568362fc24a2c88cf5670902146b9ef2ec65988d5c654b99ff66cdb9865eb6 1019 golang-gowhois_0.0~git20141008-1.dsc
+ ff9cfeae92430b1736441cacbcad7f0d059529934af6ed2947d0f706d03df9ee 2144 golang-gowhois_0.0~git20141008.orig.tar.xz
+ 24100814d300e9ddd1772f0e10097eac1213450b917597e9ea68533b46343530 1408 golang-gowhois_0.0~git20141008-1.debian.tar.xz
+ 33552c6eb3eeb81f58fa8af8b46a23ec019e66add7c4b9dec5aa45991d935cc8 3176 golang-gowhois-dev_0.0~git20141008-1_amd64.deb
+Files:
+ 9d9c7c6dfa1d107c12eb8a3c5859a7dd 1019 devel extra golang-gowhois_0.0~git20141008-1.dsc
+ 445ef3bbbc581ee1feacc62f87b81686 2144 devel extra golang-gowhois_0.0~git20141008.orig.tar.xz
+ 94f12b5ec5554a99b9bb81e3beb02bb8 1408 devel extra golang-gowhois_0.0~git20141008-1.debian.tar.xz
+ ceb2247b86ae5d93d78b90416ff4b6ee 3176 devel extra golang-gowhois-dev_0.0~git20141008-1_amd64.deb

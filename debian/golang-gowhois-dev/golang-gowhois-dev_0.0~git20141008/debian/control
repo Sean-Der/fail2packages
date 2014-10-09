@@ -1,0 +1,15 @@
+Source: golang-gowhois
+Section: devel
+Priority: extra
+Maintainer: Sean DuBois <sean@siobud.com>
+Build-Depends: debhelper (>= 8.0.0), dh-golang, golang-go
+Standards-Version: 3.9.6
+Vcs-Git: git://github.com/sean-der/goWHOIS.git
+Vcs-Browser: http://github.com/sean-der/goWHOIS
+
+Package: golang-gowhois-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg-dev
+Built-Using: ${misc:Built-Using}
+Description: Simple WHOIS library written in Go
+ goWHOIS is a simple WHOIS library written in Go
