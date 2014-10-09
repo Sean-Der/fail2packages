@@ -1,0 +1,16 @@
+Source: golang-fail2go
+Section: devel
+Priority: extra
+Maintainer: Sean DuBois <sean@siobud.com>
+Build-Depends: debhelper (>= 8.0.0), dh-golang, golang-go, golang-gosqlite-dev
+Standards-Version: 3.9.6
+Vcs-Git: git://github.com/sean-der/fail2go.git
+Vcs-Browser: http://github.com/sean-der/fail2go
+
+Package: golang-fail2go-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg-dev
+Built-Using: ${misc:Built-Using}
+Description: Go library for commuication with fail2ban via it server socket
+ fail2go is a Go library that abstracts away communication with
+ the fail2ban server socket

@@ -1,0 +1,15 @@
+# "github.com/mattn/go-sqlite3" is not available in the Debian repos, but an
+# equivalent sqlite3 package is.
+--- a/global.go
++++ b/global.go
+@@ -1,9 +1,9 @@
+ package fail2go
+
+ import (
++	_ "code.google.com/p/gosqlite/sqlite3"
+ 	"database/sql"
+ 	"encoding/json"
+-	_ "github.com/mattn/go-sqlite3"
+ 	"strings"
+ )
+
