@@ -1,0 +1,15 @@
+Source: golang-og-rek
+Section: devel
+Priority: extra
+Maintainer: Sean DuBois <sean@siobud.com>
+Build-Depends: debhelper (>= 8.0.0), dh-golang, golang-go
+Standards-Version: 3.9.5
+Vcs-Git: git://github.com/kisielk/og-rek.git
+Vcs-Browser: http://github.com/kisielk/og-rek
+
+Package: golang-og-rek-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg-dev
+Built-Using: ${misc:Built-Using}
+Description: Go library for encoding and decoding pickles.
+ og-rek is a Go library that encodes/decodes Python pickles.

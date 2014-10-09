@@ -1,0 +1,75 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package golang-og-rek
+dpkg-buildpackage: source version 0.0~git20141008-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Sean DuBois <sean@siobud.com>
+ dpkg-source --before-build golang-og-rek-dev_0.0~git20141008
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --buildsystem=golang --with=golang
+   dh_testdir -O--buildsystem=golang
+   dh_auto_clean -O--buildsystem=golang
+   dh_clean -O--buildsystem=golang
+ dpkg-source -b golang-og-rek-dev_0.0~git20141008
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building golang-og-rek using existing ./golang-og-rek_0.0~git20141008.orig.tar.xz
+dpkg-source: info: building golang-og-rek in golang-og-rek_0.0~git20141008-1.debian.tar.xz
+dpkg-source: info: building golang-og-rek in golang-og-rek_0.0~git20141008-1.dsc
+ debian/rules build
+dh build --buildsystem=golang --with=golang
+   dh_testdir -O--buildsystem=golang
+   dh_auto_configure -O--buildsystem=golang
+   dh_auto_build -O--buildsystem=golang
+github.com/kisielk/og-rek
+   dh_auto_test -O--buildsystem=golang
+=== RUN TestEncode
+--- PASS: TestEncode (0.00 seconds)
+=== RUN TestMarker
+--- PASS: TestMarker (0.00 seconds)
+=== RUN TestDecode
+--- PASS: TestDecode (0.00 seconds)
+=== RUN TestZeroLengthData
+--- PASS: TestZeroLengthData (0.00 seconds)
+=== RUN TestValue1
+--- PASS: TestValue1 (0.00 seconds)
+=== RUN TestValue2
+--- PASS: TestValue2 (0.00 seconds)
+=== RUN TestValue3
+--- PASS: TestValue3 (0.00 seconds)
+=== RUN TestValue4
+--- PASS: TestValue4 (0.00 seconds)
+=== RUN TestValue5
+--- PASS: TestValue5 (0.00 seconds)
+=== RUN TestValue6
+--- PASS: TestValue6 (0.00 seconds)
+PASS
+ok  	github.com/kisielk/og-rek	0.001s
+ fakeroot debian/rules binary
+dh binary --buildsystem=golang --with=golang
+   dh_testroot -O--buildsystem=golang
+   dh_prep -O--buildsystem=golang
+   dh_auto_install -O--buildsystem=golang
+   dh_installdocs -O--buildsystem=golang
+   dh_installchangelogs -O--buildsystem=golang
+   dh_pysupport -O--buildsystem=golang
+dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p
+   dh_perl -O--buildsystem=golang
+   dh_link -O--buildsystem=golang
+   dh_compress -O--buildsystem=golang
+   dh_fixperms -O--buildsystem=golang
+   dh_strip -O--buildsystem=golang
+   dh_makeshlibs -O--buildsystem=golang
+   dh_shlibdeps -O--buildsystem=golang
+   dh_installdeb -O--buildsystem=golang
+   dh_golang -O--buildsystem=golang
+   dh_gencontrol -O--buildsystem=golang
+dpkg-gencontrol: warning: Depends field of package golang-og-rek-dev: unknown substitution variable ${shlibs:Depends}
+   dh_md5sums -O--buildsystem=golang
+   dh_builddeb -u-Zxz -O--buildsystem=golang
+dpkg-deb: building package `golang-og-rek-dev' in `../golang-og-rek-dev_0.0~git20141008-1_amd64.deb'.
+ dpkg-genchanges  >../golang-og-rek_0.0~git20141008-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build golang-og-rek-dev_0.0~git20141008
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+Finished running lintian.

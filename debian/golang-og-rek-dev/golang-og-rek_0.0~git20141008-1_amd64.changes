@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Wed, 8 Oct 2014 16:42:03 -0600
+Source: golang-og-rek
+Binary: golang-og-rek-dev
+Architecture: source amd64
+Version: 0.0~git20141008-1
+Distribution: unstable
+Urgency: low
+Maintainer: Sean DuBois <sean@siobud.com>
+Changed-By: Sean DuBois <sean@siobud.com>
+Description:
+ golang-og-rek-dev - Go library for encoding and decoding pickles.
+Closes: 764565
+Changes:
+ golang-og-rek (0.0~git20141008-1) unstable; urgency=low
+ .
+   * Initial package. Closes: #764565.
+Checksums-Sha1:
+ 8f9972ff51ec21eaf0be1e26244e3c97e990f25c 1006 golang-og-rek_0.0~git20141008-1.dsc
+ e345d3c26d277b492f4faec3f0d88ea5b02c32ee 8308 golang-og-rek_0.0~git20141008.orig.tar.xz
+ 36ecacb5903b6fb2cfdfb9e3cbbac86fd413875e 1428 golang-og-rek_0.0~git20141008-1.debian.tar.xz
+ 855290e74438de55e6190b0c869390a61bcad00c 9432 golang-og-rek-dev_0.0~git20141008-1_amd64.deb
+Checksums-Sha256:
+ 8c95b209e58636bc9eba26b4bdff0e1171167bcffea625f9b84ac993a3f2dca9 1006 golang-og-rek_0.0~git20141008-1.dsc
+ 1717b4ec254d0b0f78155a685ebeadc61496c9a467cc77d7c5f2e5eb64716b93 8308 golang-og-rek_0.0~git20141008.orig.tar.xz
+ 2529f344cf011570f0c13d73ccfb58c7b2800dd9eb4dfd17a064a1cc00f97b97 1428 golang-og-rek_0.0~git20141008-1.debian.tar.xz
+ cea250006aa8d58acfaa0cce836b3f179bdfa93619ca8265e34cd9c872ccb721 9432 golang-og-rek-dev_0.0~git20141008-1_amd64.deb
+Files:
+ 3cab8a5cde3236523621fe24338fb5cb 9432 devel extra golang-og-rek-dev_0.0~git20141008-1_amd64.deb
+ 92ed439d2d2c02f7312e53da5514269b 1006 devel extra golang-og-rek_0.0~git20141008-1.dsc
+ b7f591a32fc047b0485cf011f16ea590 8308 devel extra golang-og-rek_0.0~git20141008.orig.tar.xz
+ 76052d663fe6f383613c4b4aa9a3df59 1428 devel extra golang-og-rek_0.0~git20141008-1.debian.tar.xz
